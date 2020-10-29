@@ -47,6 +47,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[106.11.7, )"
