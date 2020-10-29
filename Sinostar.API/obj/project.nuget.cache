@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "53QhKuPlNBK0qdEcF7TLbsu0vEUSj1cjndCG6kJ6u5869KmmoQwoaBNmupUg9vyB7AGoxt8L+dJj5u4H2HhJ+w==",
+  "dgSpecHash": "szkct/kUkOo0HR6lmY30QnsZkmrOPB3cYPD8usHf6PpNGkr12t8gwYsOQo1WOpizxB+CVHrpRFkBeaIe0iA6jg==",
   "success": true,
   "projectFilePath": "E:\\NET\\ProjectFile\\Sinostar-NET-SDK\\Sinostar.API\\Sinostar.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jonty\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\jonty\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\jonty\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\jonty\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512"
   ],
   "logs": []
 }
