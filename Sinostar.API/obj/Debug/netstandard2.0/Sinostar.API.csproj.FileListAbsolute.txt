@@ -1,0 +1,9 @@
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\bin\Debug\netstandard2.0\Sinostar.API.deps.json
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\bin\Debug\netstandard2.0\Sinostar.API.dll
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\bin\Debug\netstandard2.0\Sinostar.API.pdb
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\obj\Debug\netstandard2.0\Sinostar.API.csprojAssemblyReference.cache
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\obj\Debug\netstandard2.0\Sinostar.API.AssemblyInfoInputs.cache
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\obj\Debug\netstandard2.0\Sinostar.API.AssemblyInfo.cs
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\obj\Debug\netstandard2.0\Sinostar.API.csproj.CoreCompileInputs.cache
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\obj\Debug\netstandard2.0\Sinostar.API.dll
+E:\NET\ProjectFile\Sinostar-NET-SDK\Sinostar.API\obj\Debug\netstandard2.0\Sinostar.API.pdb

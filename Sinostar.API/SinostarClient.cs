@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using Newtonsoft.Json;
 using RestSharp;
+using Sinostar.API.Model;
 
 namespace Sinostar.API
 {
@@ -36,8 +38,37 @@ namespace Sinostar.API
         private static string sdkVersion = "BXIDA-NET-SDK-1.0.0";
 
 
-
         #region public method
+
+
+        /// <summary>
+        /// 创建巴西达订单
+        /// </summary>
+        /// <param name="jsonStr"></param>
+        /// <returns></returns>
+        public CreateResponse CreateOrder(string jsonStr)
+        {
+            var json = Json(jsonStr, "createOrder");
+            return JsonConvert.DeserializeObject<CreateResponse>(json);
+        }
+
+        /// <summary>
+        /// 获取跟踪号
+        /// </summary>
+        /// <param name="reference">创建订单返回此参数</param>
+        /// <returns></returns>
+        public TrackingResponse GetTrackingNumber(string reference)
+        {
+            string reJson = "{\"reference_no\":[\"" + reference + "\"]}";
+            var json = Json(reJson, "getTrackNumber");
+            return JsonConvert.DeserializeObject<TrackingResponse>(json);
+        }
+
+
+        #endregion
+
+
+        #region private method
 
         private string Json(string jsonStr, string method)
         {
@@ -60,9 +91,13 @@ namespace Sinostar.API
 
             ValidateResponse(response);
 
-            return response.Content;
+            //return response.Content;
+            // todo Use regular expression matching
+            var startIndexOf = response.Content.IndexOf('{');
+            var endIndexOf = response.Content.LastIndexOf('}') + 1;
+            var json = response.Content.Substring(startIndexOf, endIndexOf - startIndexOf);
 
-
+            return json;
         }
 
         /// <summary>
@@ -105,4 +140,46 @@ namespace Sinostar.API
 
         #endregion
     }
+
+    #region 跟踪号
+
+    public class DataItem
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        public string OrderNumber { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string TrackingNumber { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string WayBillNumber { get; set; }
+    }
+
+    public class TrackingResponse
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ask { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<DataItem> data { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<string> Error { get; set; }
+        /// <summary>
+        /// 全部获取成功
+        /// </summary>
+        public string message { get; set; }
+    }
+
+    #endregion
+
+
 }
